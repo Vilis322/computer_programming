@@ -80,10 +80,6 @@ if __name__ == "__main__":
     bank_account.deposit("adgfasdf")
     bank_account.deposit(10)
     bank_account.withdraw(9.5100000)
-# I have a question - if I put here "9.5100001", after formatting it also will be 0.49, BUT if I will try after that
-# withdraw 0.49 I get an error message "The amount can not be greater than current balance: how it is work in python?
-# I understood that after formatting it still will not be exactly 0.49, my question is more like how to consider it and
-# handle it
     bank_account.get_balance()
     bank_account.withdraw("sdgsdg")
     bank_account.withdraw(100)
