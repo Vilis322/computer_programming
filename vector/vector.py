@@ -1,7 +1,8 @@
 class Vector:
     """Represents a 2D vector
 
-    Supports addition, scalar multiplication via * and string representations."""
+    Supports addition, subtracting scalar multiplication and reverse multiplication via '*', and string representations
+    """
     def __init__(self, x: float, y: float):
         """Initialize the vector with axis x and y coordinates
 
