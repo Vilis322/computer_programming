@@ -6,11 +6,11 @@
 
 ## ***MAIN CLASSES***
 + ### **Hero**
-    + The base class contains the basic parameters and methods.
+    + #### The base class contains the basic parameters and methods.
 + ### **Warrior**
-    + It is a subclass of Hero with enhanced defence and special ability.
+    + #### It is a subclass of Hero with enhanced defence and special ability.
 + ### **Mage**
-    + It is a subclass of Hero with special abilities. 
+    + #### It is a subclass of Hero with special abilities. 
 
 ## ***REQUIREMENTS***
 + **Python 3.6**
