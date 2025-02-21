@@ -14,7 +14,7 @@ class Vector:
         self.y = y
 
     def __add__(self, other: "Vector") -> "Vector":
-        """Add coordinates of two vectors using addition
+        """Adds two vectors
 
         Args:
             other (Vector): The other vector that needs to be added
@@ -34,7 +34,7 @@ class Vector:
         return Vector(self.x + other.x, self.y + other.y)
 
     def __radd__(self, other: "Vector") -> "Vector":
-        """Add coordinates of two vectors using addition
+        """Adds two vectors
 
         Args:
             other (Vector): The other vector that needs to be added
