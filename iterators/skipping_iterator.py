@@ -32,16 +32,19 @@ class SkippingIterator:
         current = next(self.sequence)
 
         for _ in range(self.step):
-            next(self.sequence)
+            try:
+                next(self.sequence)
+            except StopIteration:
+                break
 
         return current
 
 
 if __name__ == "__main__":
     seq = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    it = SkippingIterator(seq, 2)
+    it = SkippingIterator(seq, 3)
     print(list(it)) # Output: [1, 4, 7]
     text = "abcdefghi"
-    it = SkippingIterator(text, 2)
+    it = SkippingIterator(text, 3)
     print("".join(it))  # Output: "adg"""
     
