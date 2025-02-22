@@ -1,0 +1,50 @@
+from typing import Iterable, Iterator, Any
+
+
+class SkippingIterator:
+    """Represents an iterator class that iterates over a sequence but skips every n elements"""
+    def __init__(self, sequence: Iterable, step: int):
+        """Initializes the iterator with a sequence of iteration and a step size for iteration
+
+        Args:
+            step (int): The step size of iteration
+            sequence (Iterable): The sequence of iterable elements to iterate by a step
+        """
+        self.step: int = step
+        self.sequence: Iterator = iter(sequence)
+
+    def __iter__(self) -> "SkippingIterator":
+        """Returns the iterator
+
+        This method is called when an iterator is required for a container
+
+        Returns:
+            SkippingIterator: The iterator object itself
+        """
+        return self
+
+    def __next__(self) -> Any:
+        """Returns the next element in the sequence at the specified step
+
+        Raises:
+            StopIteration: If the current number exceeds the high limit
+
+        Returns:
+            Any: The first element of the sequence and the next element of the sequence by a specified step
+        """
+        current = next(self.sequence)
+
+        for _ in range(self.step):
+            next(self.sequence)
+
+        return current
+
+
+if __name__ == "__main__":
+    seq = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    it = SkippingIterator(seq, 2)
+    print(list(it)) # Output: [1, 4, 7]
+    text = "abcdefghi"
+    it = SkippingIterator(text, 2)
+    print("".join(it))  # Output: "adg"""
+    
