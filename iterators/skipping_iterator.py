@@ -24,13 +24,10 @@ class SkippingIterator:
         return self
 
     def __next__(self) -> Any:
-        """Returns the next element in the sequence at the specified step
-
-        Raises:
-            StopIteration: If the current number exceeds the high limit
+        """Returns the first element or the next element of the sequence by a specified step
 
         Returns:
-            Any: The first element of the sequence and the next element of the sequence by a specified step
+            Any: The first element or the next element of the sequence by a specified step
         """
         current = next(self.sequence)
 
