@@ -1,7 +1,7 @@
-from typing import Iterator, Union
+from typing import Iterator
 
 
-def power_series(x: Union[int, float]) -> Iterator[Union[int, float]]:
+def power_series(x: int | float) -> Iterator[int | float]:
     """Generates an infinite sequence of powers of the given base number x
 
     Args:
