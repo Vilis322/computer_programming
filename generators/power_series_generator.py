@@ -1,14 +1,3 @@
-"""Objective:
-Write a generator function that generates the power series of a given base x.
-
-Requirements:
-Implement a function power_series(x).
-The generator should yield powers of x: x^0, x^1, x^2, x^3, ....
-The generator should be infinite (use yield indefinitely).
-Support floating-point and integer values for x.
-Example:
-gen = power_series(2)
-print([next(gen) for _ in range(5)])  # Output: [1, 2, 4, 8, 16]"""
 from typing import Iterator, Union
 
 
