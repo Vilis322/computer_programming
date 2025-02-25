@@ -1,30 +1,30 @@
 class BankAccount:
-    """Represents a bank account
+    """Represents a bank account.
 
     Allows users to manage their bank account by making deposits, withdrawals, and checking the balance.
     """
     def __init__(self, owner_name: str, balance: float = 0):
-        """Initializes a new bank account
+        """Initializes a new bank account.
 
         Args:
-            owner_name (str): The new owner's name
-            balance (float): The current balance in $, default is 0
+            owner_name (str): The new owner's name.
+            balance (float): The current balance in $, default is 0.
         """
         self.owner_name: str = owner_name
         self.balance: float = balance
 
     def deposit(self, amount: float) -> float:
-        """Adds the specified amount to the account balance
+        """Adds the specified amount to the account balance.
 
         Args:
             amount (float): The amount to deposit. Must be greater than 0.
 
         Returns:
-            float: The updated account balance
+            float: The updated account balance.
 
         Raises:
-            TypeError: If the amount is not int or float type
-            ValueError: If the amount less or equal 0
+            TypeError: If the amount is not int or float type.
+            ValueError: If the amount less or equal 0.
         """
         try:
             if not isinstance(amount, (int, float)):
@@ -40,17 +40,17 @@ class BankAccount:
         return self.balance
 
     def withdraw(self, amount: float) -> float:
-        """Withdraws the specified amount from the account balance
+        """Withdraws the specified amount from the account balance.
 
         Args:
             amount (float): The amount to withdraw. Must be greater than 0 and not exceed the current balance.
 
         Returns:
-            float: The updated account balance
+            float: The updated account balance.
 
         Raises:
-            TypeError: If the amount is not int or float type
-            ValueError: If the amount less or equal 0 or exceed the current balance
+            TypeError: If the amount is not int or float type.
+            ValueError: If the amount less or equal 0 or exceed the current balance.
         """
         try:
             if not isinstance(amount, (int, float)):
