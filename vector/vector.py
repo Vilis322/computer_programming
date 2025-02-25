@@ -1,29 +1,29 @@
 class Vector:
-    """Represents a 2D vector
+    """Represents a 2D vector.
 
-    Supports addition, subtracting scalar multiplication and reverse multiplication via '*', and string representations
+    Supports addition, subtracting scalar multiplication and reverse multiplication via '*', and string representations.
     """
     def __init__(self, x: float, y: float):
-        """Initialize the vector with axis x and y coordinates
+        """Initialize the vector with axis x and y coordinates.
 
         Args:
-            x (float): The x-coordinate of the vector
-            y (float): The y-coordinate of the vector
+            x (float): The x-coordinate of the vector.
+            y (float): The y-coordinate of the vector.
         """
         self.x = x
         self.y = y
 
     def __add__(self, other: "Vector") -> "Vector":
-        """Adds two vectors
+        """Adds two vectors.
 
         Args:
-            other (Vector): The other vector that needs to be added
+            other (Vector): The other vector that needs to be added.
 
         Returns:
-            Vector: A new vector that is a result of adding two vectors
+            Vector: A new vector that is a result of adding two vectors.
 
         Raises:
-            TypeError: If the other is not an instance of the Vector class
+            TypeError: If the other is not an instance of the Vector class.
         """
         try:
             if not isinstance(other, Vector):
@@ -34,27 +34,27 @@ class Vector:
         return Vector(self.x + other.x, self.y + other.y)
 
     def __radd__(self, other: "Vector") -> "Vector":
-        """Adds two vectors
+        """Adds two vectors.
 
         Args:
-            other (Vector): The other vector that needs to be added
+            other (Vector): The other vector that needs to be added.
 
         Returns:
-            Vector: A new vector that is a result of adding two vectors
+            Vector: A new vector that is a result of adding two vectors.
         """
         return self + other
 
     def __sub__(self, other: "Vector") -> "Vector":
-        """Subtracts one vector from another
+        """Subtracts one vector from another.
 
         Args:
-            other (Vector): The other vector that needs to be subtracted
+            other (Vector): The other vector that needs to be subtracted.
 
         Returns:
-            Vector: A new vector that is a result of subtracting one vector from another
+            Vector: A new vector that is a result of subtracting one vector from another.
 
         Raises:
-            TypeError: If the other is not an instance of the Vector class
+            TypeError: If the other is not an instance of the Vector class.
         """
         try:
             if not isinstance(other, Vector):
@@ -65,27 +65,27 @@ class Vector:
         return Vector(self.x - other.x, self.y - other.y)
 
     def __rsub__(self, other: "Vector") -> "Vector":
-        """Subtracts one vector from another
+        """Subtracts one vector from another.
 
         Args:
-            other (Vector): The other vector that needs to be subtracted
+            other (Vector): The other vector that needs to be subtracted.
 
         Returns:
-            Vector: A new vector that is a result of subtracting one vector from another
+            Vector: A new vector that is a result of subtracting one vector from another.
         """
         return self - other
 
     def __mul__(self, scalar: float) -> "Vector":
-        """Multiplies vector on scalar
+        """Multiplies vector on scalar.
 
         Args:
-            scalar (float): The scalar value that needs to multiply by a vector
+            scalar (float): The scalar value that needs to multiply by a vector.
 
         Returns:
-            Vector: A new vector that is a result of multiplying by a scalar
+            Vector: A new vector that is a result of multiplying by a scalar.
 
         Raises:
-            TypeError: If the scalar is not an instance of the `float` type
+            TypeError: If the scalar is not an instance of the `float` type.
         """
         try:
             if not isinstance(scalar, float):
@@ -96,18 +96,18 @@ class Vector:
         return Vector(self.x * scalar, self.y * scalar)
 
     def __rmul__(self, scalar: float) -> "Vector":
-        """Handles scalar multiplication when the scalar is on the left side of the multiplication
+        """Handles scalar multiplication when the scalar is on the left side of the multiplication.
 
         Args:
-            scalar (float): The scalar value that needs to multiply by a vector
+            scalar (float): The scalar value that needs to multiply by a vector.
 
         Returns:
-            Vector: A new vector that is a result of multiplying by a scalar
+            Vector: A new vector that is a result of multiplying by a scalar.
         """
         return self * scalar
 
     def __str__(self) -> str:
-        """Returns a string representation of the vector"""
+        """Returns a string representation of the vector."""
         return f"({self.x}, {self.y})"
 
 
