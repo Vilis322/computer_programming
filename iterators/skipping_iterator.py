@@ -2,32 +2,32 @@ from typing import Iterable, Iterator, Any
 
 
 class SkippingIterator:
-    """Represents an iterator class that iterates over a sequence but skips every n elements"""
+    """Represents an iterator class that iterates over a sequence but skips every n elements."""
     def __init__(self, sequence: Iterable, step: int):
-        """Initializes the iterator with a sequence of iteration and a step size for iteration
+        """Initializes the iterator with a sequence of iteration and a step size for iteration.
 
         Args:
-            step (int): The step size of iteration
-            sequence (Iterable): The sequence of iterable elements to iterate by a step
+            step (int): The step size of iteration.
+            sequence (Iterable): The sequence of iterable elements to iterate by a step.
         """
         self.step: int = step
         self.sequence: Iterator = iter(sequence)
 
     def __iter__(self) -> "SkippingIterator":
-        """Returns the iterator
+        """Returns the iterator.
 
-        This method is called when an iterator is required for a container
+        This method is called when an iterator is required for a container.
 
         Returns:
-            SkippingIterator: The iterator object itself
+            SkippingIterator: The iterator object itself.
         """
         return self
 
     def __next__(self) -> Any:
-        """Returns the first element or the next element of the sequence by a specified step
+        """Returns the first element or the next element of the sequence by a specified step.
 
         Returns:
-            Any: The first element or the next element of the sequence by a specified step
+            Any: The first element or the next element of the sequence by a specified step.
         """
         current = next(self.sequence)
 
