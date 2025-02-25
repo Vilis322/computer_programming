@@ -2,16 +2,16 @@ from typing import Iterator
 
 
 def power_series(x: int | float) -> Iterator[int | float]:
-    """Generates an infinite sequence of powers of the given base number x
+    """Generates an infinite sequence of powers of the given base number x.
 
     Args:
-        x (int or float): The base number for the power series
+        x (int or float): The base number for the power series.
 
     Yields:
-        int or float: The next power of the number x (x^n), where n starts at 0 and increments with each iteration
+        int or float: The next power of the number x (x^n), where n starts at 0 and increments with each iteration.
 
     Raises:
-        TypeError: If x is not of type 'int' or 'float'
+        TypeError: If x is not of type 'int' or 'float'.
     """
     if not isinstance(x, (int, float)):
         raise TypeError("x must be a numeric value.")
