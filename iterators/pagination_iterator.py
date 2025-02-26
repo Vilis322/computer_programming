@@ -14,6 +14,7 @@ class Paginator:
         self.data: list = data
         self.page_max: int = page_max
         self.page: int = 1
+        self.total_pages = (len(self.data) + self.page_max - 1) // self.page_max
 
     def __iter__(self) -> "Paginator":
         """Returns the iterator.
@@ -36,8 +37,7 @@ class Paginator:
         Raises:
             StopIteration: When there are no more pages left.
         """
-        total_pages = (len(self.data) + self.page_max - 1) // self.page_max
-        if self.page > total_pages:
+        if self.page > self.total_pages:
             raise StopIteration
 
         start = (self.page - 1) * self.page_max
