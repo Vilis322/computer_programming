@@ -68,7 +68,7 @@ class BankAccount:
         return self.balance
 
     def get_balance(self) -> None:
-        """Prints the current balance"""
+        """Prints the current balance."""
         print(f"\nCurrent balance: {self.balance:.2f}$.")
 
 
