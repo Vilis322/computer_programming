@@ -21,15 +21,23 @@ def cached_results(func):
 
 @cached_results
 def fibonacci(n: int) -> int:
+    print(f" === start of {n} === ")
     if n == 1:
+        print(f" === end of {n} === ")
         return 1
     if n == 0:
+        print(f" === end of {n} === ")
         return 0
     result = fibonacci(n - 1) + fibonacci(n - 2)
+    print(f" === end of {n} === ")
     return result
 
 
 start = time.perf_counter()
-fibonacci(3)
+fibonacci(35)
+end = time.perf_counter()
+print(f"Run time for first uncached call is: {end - start:.5f} sec")
+start = time.perf_counter()
+fibonacci(35)
 end = time.perf_counter()
 print(f"Run time for first uncached call is: {end - start:.5f} sec")
