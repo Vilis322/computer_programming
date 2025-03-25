@@ -1,0 +1,29 @@
+{
+    "name": "Kyrylo Pryiomyshev",
+    "contact": {
+        "email": "viliskrill322@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/kyrylo-pryiomyshev",
+        "github": "https://github.com/Vilis322"
+    },
+    "experience": [
+
+    ],
+    "skills": ["Python", "C#", "Back-End", "Git", "Arduino", "Django", "SQL", "Teamwork"
+    ],
+    "education": [
+        {
+            "university": "Kremenchuk College of Transport Infrastructure",
+            "degree": "secondary technical education",
+            "field": "Maintenance, repair and operation of traction railway rolling stock",
+            "start_year": 2014,
+            "end_year": 2018
+        },
+        {
+            "university": "University of Tartu",
+            "degree": "bachelor degree",
+            "field": "Information Technology Systems Development",
+            "start_year": 2023
+        }
+    ],
+    "projects": []
+}
