@@ -2,7 +2,7 @@ import os
 
 main_dir = "file_management"
 if not os.path.exists(main_dir):
-    os.mkdir(maid_dir)
+    os.mkdir(main_dir)
 
 file1_path = os.path.join(main_dir, "file1.txt")
 file2_path = os.path.join(main_dir, "file2.txt")
@@ -22,7 +22,7 @@ if not os.path.exists(sub_dir):
     os.mkdir(sub_dir)
 
 new_file2_path = os.path.join(sub_dir, "file2.txt")
-if os.path.exists(new_file2_path):
+if os.path.exists(file2_path):
     os.rename(file2_path, new_file2_path)
 
 if os.path.exists(new_file2_path):
